@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LoiloNote Custom Panel",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "Loilo MOD"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://loilonote.app/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
